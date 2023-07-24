@@ -1,94 +1,103 @@
 @import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
 
-body {
-  margin: 0px;
-  text-align: center;
+* {
+  box-sizing: border-box;
 }
 
-.App {
+body {
+  margin: 0px;
+  font-family: "Karla", sans-serif;
+}
+
+main {
+  padding: 36px;
+}
+
+/* .App {
   display: flex;
   flex-flow: column;
   align-items: center;
-  font-family: "Karla", sans-serif;
-}
+} */
 
 .Header {
   display: flex;
   align-items: center;
-  justify-content: center;
-
-  width: 100%;
   height: 65px;
+  padding: 20px;
   background: linear-gradient(90deg, #672280 1.18%, #a626d3 100%);
+  color: white;
 }
 
 .Header--logo {
-  height: 26px;
-  width: 31px;
-  padding-left: 20px;
+  height: 100%;
+  margin-right: 6px;
 }
 
 .Header--title {
-  font-size: 21px;
-  color: white;
-  padding-left: 7px;
+  font-size: 1.25rem;
+  margin-right: auto;
 }
 
 .meme-input-field {
-  margin-top: 36px;
+  display: grid;
+  grid-template: 40px 40px / 1fr 1fr;
+  gap: 17px;
+  margin-bottom: 17px;
 }
 
 .meme-text-input {
-  width: 214px;
-  height: 35px;
+  font-family: "Karla", sans-serif;
   border-radius: 5px;
   border: solid 1px #d5d4d8;
-
-  padding: 0px 12px;
-
-  font-size: 12px;
-}
-
-.text-top {
-  margin-right: 8.5px;
-  padding-left: 12px;
-}
-
-.text-bottom {
-  margin-left: 8.5px;
-  padding-left: 12px;
+  text-indent: 5px;
 }
 
 .new-img-btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 15px;
+  grid-column: 1/-1;
   border-radius: 5px;
-  border: none;
-
-  width: 477px;
-  height: 40px;
-
   color: white;
-  font-size: 19px;
-
+  border: none;
   background: linear-gradient(90.41deg, #711f8d 1.14%, #a818da 100%);
+  cursor: pointer;
+}
+
+.meme--container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.meme--output {
+  position: relative;
 }
 
 .meme--text {
   position: absolute;
+  width: 80%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  color: white;
+  margin: 15px 0;
+  font-family: Impact, sans-serif;
+  padding: 0 5px;
+  font-size: 2em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-shadow: 2px 2px 0 #000, -2px -2px 0 #000, 2px -2px 0 #000,
+    -2px 2px 0 #000, 0 2px 0 #000, 2px 0 0 #000, 0 -2px 0 #000, -2px 0 0 #000,
+    2px 2px 5px #000;
+}
+
+.top {
+  top: 0;
+}
+
+.bottom {
+  bottom: 0;
 }
 
 .meme--image {
-  position: relative;
-}
-
-.meme--output {
-  width: 477px;
-  height: 268px;
-
-  margin-top: 36px;
-
-  border: solid 1px black;
+  max-width: 100%;
+  border-radius: 3px;
 }
